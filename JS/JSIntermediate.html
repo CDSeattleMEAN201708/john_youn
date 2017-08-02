@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Intermediate</title>
+    <script>
+        function star_string(num) {
+            let stars = "";
+            for (let i=0; i<num; i++) {
+                stars += "*"
+            }
+            return stars
+        }
+
+        function draw_stars(arr) {
+            for (let i=0; i<arr.length; i++) {
+                var stars = "";
+                if (typeof(arr[i]) === "number") {
+                    for (let j=0; j<arr[i]; j++) {
+                        stars += "*";
+                    }
+                }
+                else if (typeof(arr[i] === "string")) {
+                    for (let j=0; j<arr[i].length; j++) {
+                        stars += arr[i][0].toLowerCase();
+                    }
+                }
+                console.log(stars);
+            }
+        }
+
+        let x = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"];
+        draw_stars(x);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
