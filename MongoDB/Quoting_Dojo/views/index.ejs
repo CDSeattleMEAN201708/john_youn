@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QuotingDojo</title>
+</head>
+<body>
+    <h1>Welcome to QuotingDojo</h1>
+    <form action="/quotes" method="post">
+        Your name: <input type="text" name="name">
+        Your quote: <textarea name="quote"></textarea>
+        <input type="submit" value="Add my quote!">
+    </form>
+    <form action="/quotes" method="get">
+        <input type="submit" value="Skip to quotes">
+    </form>
+</body>
+</html>
