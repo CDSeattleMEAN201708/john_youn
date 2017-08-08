@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <th>Age:</th>
+            <th>Height:</th>
+            <th>Actions</th>
+        </tr>
+    <% for (var x in rabbits) { %>
+        <tr>
+            <td><%= rabbits[x].name %></td>
+            <td><%= rabbits[x].age %></td>
+            <td><%= rabbits[x].height %></td>
+            <td><a href="/<%=rabbits[x]._id%>">Show</a><a href="/edit/<%=rabbits[x]._id%>">Edit</a><a href="/destroy/<%=rabbits[x]._id%>">Delete</a></td>
+        </tr>
+    <% } %>
+    </table>
+    <form action="/new" method="get">
+        <input type="submit" value="Click here to add a new rabbit!">
+    </form>
+</body>
+</html>

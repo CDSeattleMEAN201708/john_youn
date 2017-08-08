@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show Page</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h2>Current data</h2>
+    <h3><%= rabbit.name %></h3>
+    <h3><%= rabbit.age %></h3>
+    <h3><%= rabbit.height %></h3>
+    <h2>New data here:</h2>
+    <form action="/<%=rabbit._id%>" method="post">
+        New Name: <input type="text" name="name" required>
+        New Age: <input type="number" name="age" required>
+        New Height: <input type="number" name="height" required>
+        <input type="submit" value="Submit edits">
+    </form>
+</body>
+</html>
