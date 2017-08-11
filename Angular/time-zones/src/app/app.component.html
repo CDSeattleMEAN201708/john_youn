@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>US Time Zones</title>
+</head>
+<body>
+  <h1>US Time Zone Display</h1>
+  <button (click)="getTime('pst')" [ngClass]="{highlight: zone === 'pst'}">PST</button>
+  <button (click)="getTime('mst')" [ngClass]="{highlight: zone === 'mst'}">MST</button>
+  <button (click)="getTime('cst')" [ngClass]="{highlight: zone === 'cst'}">CST</button>
+  <button (click)="getTime('est')" [ngClass]="{highlight: zone === 'est'}">EST</button>
+  <button (click)="clear()">Clear</button>
+  <h1>{{ time | date:"medium" }}</h1>
+</body>
+</html>
